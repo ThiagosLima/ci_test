@@ -13,7 +13,7 @@ before_deploy:
 
 deploy:
   provider: heroku
-  app: "api-felicidade"
+  app: "api-felicidade-test"
   api_key:
     secure: "$HEROKU_API_KEY"
   on:
