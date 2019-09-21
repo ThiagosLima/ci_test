@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  # Build images for test and deploy
+  - docker build -t api-felicidade --target prod .
+  # - docker build -t api-felicidade:test --target test .
+
+script:
+  - docker run api-felicidade:test
