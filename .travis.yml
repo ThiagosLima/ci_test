@@ -13,8 +13,8 @@ before_deploy:
 
 deploy:
   provider: heroku
+  app: "api-felicidade"
   api_key:
-    secure: $HEROKU_API_KEY
-  app:
+    secure: "$HEROKU_API_KEY"
   on:
     branch: master
