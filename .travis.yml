@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t api-felicidade:test --target test .
+
+script:
+  - docker run -e CI=true api-felicidade:test
+
+before_deploy:
+  - docker build -t api-felicidade --target prod .
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_API_KEY
+  app:
+  on:
+    branch: master
