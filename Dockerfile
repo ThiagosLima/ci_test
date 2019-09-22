@@ -6,7 +6,7 @@ COPY package*.json ./
 # 2) Development environment
 FROM base as dev
 ENV NODE_ENV=development
-RUN npm install --only=development
+RUN npm install
 COPY . .
 CMD [ "../node_modules/nodemon/bin/nodemon.js", "index.js" ]
 
