@@ -4,3 +4,5 @@ build:
       dockerfile: Dockerfile
       target: prod
     web: Dockerfile
+run:
+  web: node index.js
