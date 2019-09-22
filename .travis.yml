@@ -10,7 +10,7 @@ script:
 
 deploy:
   provider: heroku
-  app: "api-felicidade-test"
+  app: "api-felicidade-test2"
   api_key:
     secure: "$HEROKU_API_KEY"
   on:
